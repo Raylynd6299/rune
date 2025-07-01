@@ -1,0 +1,62 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.0.6/schema.json",
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100
+  },
+  "javascript": {
+    "formatter": {
+      "enabled": true,
+      "indentStyle": "space",
+      "indentWidth": 2,
+      "lineWidth": 80,
+      "quoteStyle": "double",
+      "trailingCommas": "all",
+      "semicolons": "always",
+      "attributePosition": "multiline",
+      "bracketSpacing": true
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "a11y": {
+        "noStaticElementInteractions": "off"
+      },
+      "correctness": {
+        "useValidForDirection": "error",
+        "noConstAssign": "error",
+        "noUnusedVariables": "error"
+      },
+      "style": {
+        "useSingleVarDeclarator": "error",
+        "noUselessElse": "warn",
+        "noParameterAssign": "error",
+        "useAsConstAssertion": "error",
+        "useDefaultParameterLast": "error",
+        "useEnumInitializers": "error",
+        "useSelfClosingElements": "error",
+        "noUnusedTemplateLiteral": "error",
+        "useNumberNamespace": "error",
+        "noInferrableTypes": "error"
+      },
+      "suspicious": {
+        "noEmptyBlockStatements": "error",
+        "noAssignInExpressions": "error",
+        "noDoubleEquals": "error",
+        "noUnsafeNegation": "error",
+        "noRedeclare": "error",
+        "noVar": "error",
+        "noArrayIndexKey": "off"
+      },
+      "nursery": {
+        "useExplicitType": "error"
+      }
+    }
+  },
+  "files": {
+    "includes": ["**", "!**/node_modules/", "!**/dist/", "!**/build/"]
+  }
+}
