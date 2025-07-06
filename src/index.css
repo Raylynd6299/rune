@@ -1,68 +1,157 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+/* Configure dark mode to use class strategy */
+@custom-variant dark (&:where(.dark, .dark *));
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@theme {
+  /* Custom CSS Variables for Design System */
+  --color-background: oklch(97.3% 0.013 69.66);
+  --color-foreground: oklch(9% 0.089 285.79);
+  --color-card: oklch(100% 0 0);
+  --color-card-foreground: oklch(9% 0.089 285.79);
+  --color-popover: oklch(100% 0 0);
+  --color-popover-foreground: oklch(9% 0.089 285.79);
+  --color-primary: oklch(66.87% 0.138 35.36);
+  --color-primary-foreground: oklch(100% 0 0);
+  --color-secondary: oklch(96.1% 0.015 220.15);
+  --color-secondary-foreground: oklch(11.2% 0.022 286.17);
+  --color-muted: oklch(96.1% 0.015 220.15);
+  --color-muted-foreground: oklch(46.9% 0.025 214.12);
+  --color-accent: oklch(45.75% 0.139 211.78);
+  --color-accent-foreground: oklch(100% 0 0);
+  --color-destructive: oklch(67.71% 0.176 22.18);
+  --color-destructive-foreground: oklch(98% 0.015 220.15);
+  --color-border: oklch(91.4% 0.031 214.12);
+  --color-input: oklch(91.4% 0.031 214.12);
+  --color-ring: oklch(9% 0.089 285.79);
+  --color-sidebar-background: oklch(98% 0 0);
+  --color-sidebar-foreground: oklch(26.1% 0.014 240);
+  --color-sidebar-primary: oklch(10% 0.016 240);
+  --color-sidebar-primary-foreground: oklch(98% 0 0);
+  --color-sidebar-accent: oklch(95.9% 0.013 240);
+  --color-sidebar-accent-foreground: oklch(10% 0.016 240);
+  --color-sidebar-border: oklch(91% 0.027 220);
+  --color-sidebar-ring: oklch(74.8% 0.196 217.11);
+
+  /* Brand Colors */
+  --color-brand-50: oklch(97.3% 0.013 69.66);
+  --color-brand-100: oklch(93.6% 0.042 70.67);
+  --color-brand-200: oklch(86.3% 0.108 65.85);
+  --color-brand-300: oklch(78.8% 0.171 55.31);
+  --color-brand-400: oklch(72.2% 0.199 44.73);
+  --color-brand-500: oklch(66.87% 0.138 35.36);
+  --color-brand-600: oklch(60.1% 0.134 30.66);
+  --color-brand-700: oklch(50.8% 0.130 30.30);
+  --color-brand-800: oklch(42.2% 0.103 31.61);
+  --color-brand-900: oklch(35.4% 0.084 33.18);
+
+  /* Accent Colors (Sky Blue) */
+  --color-accent-50: oklch(98.4% 0.013 225.40);
+  --color-accent-100: oklch(95.6% 0.025 224.75);
+  --color-accent-200: oklch(89.4% 0.070 224.31);
+  --color-accent-300: oklch(78.8% 0.108 222.66);
+  --color-accent-400: oklch(68.4% 0.132 221.27);
+  --color-accent-500: oklch(60.1% 0.142 219.72);
+  --color-accent-600: oklch(54.8% 0.130 218.74);
+  --color-accent-700: oklch(49.3% 0.107 218.54);
+  --color-accent-800: oklch(43.4% 0.088 218.83);
+  --color-accent-900: oklch(37.6% 0.070 219.17);
+
+  /* Neutral Colors */
+  --color-neutral-50: oklch(98.4% 0 0);
+  --color-neutral-100: oklch(96.9% 0 0);
+  --color-neutral-200: oklch(92.9% 0 0);
+  --color-neutral-300: oklch(87.8% 0 0);
+  --color-neutral-400: oklch(69.2% 0 0);
+  --color-neutral-500: oklch(52.9% 0 0);
+  --color-neutral-600: oklch(42.1% 0 0);
+  --color-neutral-700: oklch(32.5% 0 0);
+  --color-neutral-800: oklch(22.1% 0 0);
+  --color-neutral-900: oklch(15.7% 0 0);
+
+  /* Font Family */
+  --font-family-sans: Inter, system-ui, sans-serif;
+
+  /* Spacing and Layout */
+  --radius: 0.5rem;
+  --container-center: true;
+  --container-padding: 2rem;
+  --container-screens-2xl: 1400px;
+
+  /* Border Radius */
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  /* Animations */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-fade-in: fade-in 0.5s ease-out;
+  --animate-scale-in: scale-in 0.3s ease-out;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+/* Dark theme overrides */
+.dark {
+    --color-background: oklch(9% 0.089 285.79);
+    --color-foreground: oklch(98% 0.015 220.15);
+    --color-card: oklch(10.5% 0.089 285.79);
+    --color-card-foreground: oklch(98% 0.015 220.15);
+    --color-popover: oklch(9% 0.089 285.79);
+    --color-popover-foreground: oklch(98% 0.015 220.15);
+    --color-secondary: oklch(17.5% 0.057 217.2);
+    --color-secondary-foreground: oklch(98% 0.015 220.15);
+    --color-muted: oklch(17.5% 0.057 217.2);
+    --color-muted-foreground: oklch(65.1% 0.041 215);
+    --color-destructive: oklch(43.84% 0.204 25.33);
+    --color-destructive-foreground: oklch(98% 0.015 220.15);
+    --color-border: oklch(17.5% 0.057 217.2);
+    --color-input: oklch(17.5% 0.057 217.2);
+    --color-ring: oklch(83.9% 0.054 212.7);
+    --color-sidebar-background: oklch(10% 0.016 240);
+    --color-sidebar-foreground: oklch(95.9% 0.013 240);
+    --color-sidebar-primary: oklch(62.75% 0.196 224.3);
+    --color-sidebar-accent: oklch(15.9% 0.010 240);
+    --color-sidebar-accent-foreground: oklch(95.9% 0.013 240);
+    --color-sidebar-border: oklch(15.9% 0.010 240);
   }
-  a:hover {
-    color: #747bff;
+
+/* Keyframes for Animations */
+@keyframes accordion-down {
+  from {
+    height: 0;
   }
-  button {
-    background-color: #f9f9f9;
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
