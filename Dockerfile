@@ -10,7 +10,10 @@ WORKDIR /app
 COPY package*.json ./
 
 # Instalar dependencias
-RUN npm ci
+# Limpiar cache de npm y forzar instalación de dependencias opcionales para ARM64
+RUN npm cache clean --force && \
+    npm ci --include=optional && \
+    npm rebuild
 
 # Copiar el resto del código
 COPY . .
