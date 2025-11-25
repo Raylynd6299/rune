@@ -1,5 +1,5 @@
-import React from 'react'
-import { Button } from '@/components/Button'
+import React from "react";
+import { Button } from "@/components/Button";
 
 export const Hero = (): React.ReactElement => {
   return (
@@ -7,7 +7,7 @@ export const Hero = (): React.ReactElement => {
       {/* Background decoration */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5 dark:opacity-10"></div>
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-to-r from-brand-400/20 to-accent-400/20 rounded-full blur-3xl"></div>
-      
+
       <div className="relative max-w-7xl mx-auto px-6 py-24 sm:py-32 lg:py-40">
         <div className="text-center">
           {/* Badge */}
@@ -15,7 +15,7 @@ export const Hero = (): React.ReactElement => {
             <span className="mr-2">🚀</span>
             The future of language learning is here
           </div>
-          
+
           {/* Main heading */}
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
             <span className="block">Learn Languages</span>
@@ -23,24 +23,25 @@ export const Hero = (): React.ReactElement => {
               The Natural Way
             </span>
           </h1>
-          
+
           {/* Subtitle */}
           <p className="max-w-2xl mx-auto text-lg sm:text-xl text-muted-foreground mb-10 leading-relaxed">
-            Master any language through immersive content, smart vocabulary training, 
-            and AI-powered pronunciation coaching. Join millions learning naturally with Polyfy.
+            Master any language through immersive content, smart vocabulary
+            training, and AI-powered pronunciation coaching. Join millions
+            learning naturally with Polyfy.
           </p>
-          
+
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-gradient-to-r from-brand-500 to-brand-600 hover:from-brand-600 hover:to-brand-700 text-white font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               Start Learning Free
               <span className="ml-2">→</span>
             </Button>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               size="lg"
               className="border-2 border-border hover:bg-accent/10 px-8 py-4 text-lg font-semibold transition-all duration-300"
             >
@@ -48,7 +49,7 @@ export const Hero = (): React.ReactElement => {
               <span className="ml-2">▶</span>
             </Button>
           </div>
-          
+
           {/* Trust indicators */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
@@ -65,7 +66,7 @@ export const Hero = (): React.ReactElement => {
             </div>
           </div>
         </div>
-        
+
         {/* Hero image/illustration */}
         <div className="mt-20 relative">
           <div className="relative mx-auto max-w-4xl">
@@ -75,11 +76,15 @@ export const Hero = (): React.ReactElement => {
                   <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-r from-brand-400 to-accent-400 flex items-center justify-center text-4xl">
                     🌍
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-2">Interactive Learning Dashboard</h3>
-                  <p className="text-muted-foreground">Experience personalized language learning</p>
+                  <h3 className="text-2xl font-bold text-foreground mb-2">
+                    Interactive Learning Dashboard
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Experience personalized language learning
+                  </p>
                 </div>
               </div>
-              
+
               {/* Floating cards */}
               <div className="absolute -top-4 -left-4 bg-card border border-border rounded-lg p-4 shadow-lg">
                 <div className="flex items-center gap-2">
@@ -88,11 +93,13 @@ export const Hero = (): React.ReactElement => {
                   </div>
                   <div>
                     <div className="font-semibold text-sm">Daily Goal</div>
-                    <div className="text-xs text-muted-foreground">15 min completed</div>
+                    <div className="text-xs text-muted-foreground">
+                      15 min completed
+                    </div>
                   </div>
                 </div>
               </div>
-              
+
               <div className="absolute -top-4 -right-4 bg-card border border-border rounded-lg p-4 shadow-lg">
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-full bg-brand-500 flex items-center justify-center text-white text-sm">
@@ -104,7 +111,7 @@ export const Hero = (): React.ReactElement => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-card border border-border rounded-lg p-4 shadow-lg">
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-full bg-accent-500 flex items-center justify-center text-white text-sm">
@@ -112,7 +119,9 @@ export const Hero = (): React.ReactElement => {
                   </div>
                   <div>
                     <div className="font-semibold text-sm">Words Learned</div>
-                    <div className="text-xs text-muted-foreground">1,247 total</div>
+                    <div className="text-xs text-muted-foreground">
+                      1,247 total
+                    </div>
                   </div>
                 </div>
               </div>
@@ -121,5 +130,5 @@ export const Hero = (): React.ReactElement => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

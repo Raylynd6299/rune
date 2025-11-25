@@ -1,56 +1,62 @@
-import React from 'react'
+import React from "react";
 
 export const Testimonials = (): React.ReactElement => {
   const testimonials = [
     {
-      name: 'Sarah Chen',
-      role: 'Software Engineer',
-      avatar: '👩‍💻',
-      content: 'Polyfy helped me become fluent in Spanish in just 6 months. The pronunciation training is incredible!',
+      name: "Sarah Chen",
+      role: "Software Engineer",
+      avatar: "👩‍💻",
+      content:
+        "Polyfy helped me become fluent in Spanish in just 6 months. The pronunciation training is incredible!",
       rating: 5,
-      language: 'Spanish'
+      language: "Spanish",
     },
     {
-      name: 'Marcus Johnson',
-      role: 'Business Analyst',
-      avatar: '👨‍💼',
-      content: 'The spaced repetition system is genius. I\'ve learned over 3000 Japanese words and actually remember them.',
+      name: "Marcus Johnson",
+      role: "Business Analyst",
+      avatar: "👨‍💼",
+      content:
+        "The spaced repetition system is genius. I've learned over 3000 Japanese words and actually remember them.",
       rating: 5,
-      language: 'Japanese'
+      language: "Japanese",
     },
     {
-      name: 'Elena Rodriguez',
-      role: 'Teacher',
-      avatar: '👩‍🏫',
-      content: 'As an educator, I appreciate how Polyfy makes learning engaging. My students love the gamification features.',
+      name: "Elena Rodriguez",
+      role: "Teacher",
+      avatar: "👩‍🏫",
+      content:
+        "As an educator, I appreciate how Polyfy makes learning engaging. My students love the gamification features.",
       rating: 5,
-      language: 'French'
+      language: "French",
     },
     {
-      name: 'Ahmed Hassan',
-      role: 'Medical Student',
-      avatar: '👨‍⚕️',
-      content: 'Perfect for busy schedules. I practice German during my commute and have made amazing progress.',
+      name: "Ahmed Hassan",
+      role: "Medical Student",
+      avatar: "👨‍⚕️",
+      content:
+        "Perfect for busy schedules. I practice German during my commute and have made amazing progress.",
       rating: 5,
-      language: 'German'
+      language: "German",
     },
     {
-      name: 'Lisa Park',
-      role: 'Marketing Manager',
-      avatar: '👩‍💼',
-      content: 'The social features are fantastic. I found a language exchange partner and we practice together daily.',
+      name: "Lisa Park",
+      role: "Marketing Manager",
+      avatar: "👩‍💼",
+      content:
+        "The social features are fantastic. I found a language exchange partner and we practice together daily.",
       rating: 5,
-      language: 'Korean'
+      language: "Korean",
     },
     {
-      name: 'David Thompson',
-      role: 'Freelancer',
-      avatar: '👨‍💻',
-      content: 'Polyfy\'s content library is amazing. Learning through real videos and podcasts feels so natural.',
+      name: "David Thompson",
+      role: "Freelancer",
+      avatar: "👨‍💻",
+      content:
+        "Polyfy's content library is amazing. Learning through real videos and podcasts feels so natural.",
       rating: 5,
-      language: 'Portuguese'
-    }
-  ]
+      language: "Portuguese",
+    },
+  ];
 
   return (
     <section className="py-24 bg-background">
@@ -64,7 +70,8 @@ export const Testimonials = (): React.ReactElement => {
             </span>
           </h2>
           <p className="max-w-2xl mx-auto text-lg text-muted-foreground">
-            Real stories from real people who transformed their lives through language learning with Polyfy.
+            Real stories from real people who transformed their lives through
+            language learning with Polyfy.
           </p>
         </div>
 
@@ -78,15 +85,20 @@ export const Testimonials = (): React.ReactElement => {
               {/* Rating stars */}
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <span key={i} className="text-yellow-400 text-lg">★</span>
+                  <span
+                    key={i}
+                    className="text-yellow-400 text-lg"
+                  >
+                    ★
+                  </span>
                 ))}
               </div>
-              
+
               {/* Content */}
               <blockquote className="text-foreground mb-6 leading-relaxed">
                 "{testimonial.content}"
               </blockquote>
-              
+
               {/* Author info */}
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-r from-brand-400 to-accent-400 flex items-center justify-center text-xl">
@@ -112,7 +124,7 @@ export const Testimonials = (): React.ReactElement => {
         <div className="text-center mt-16">
           <div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-gradient-to-r from-brand-50 to-accent-50 dark:from-brand-900/20 dark:to-accent-900/20 border border-border rounded-2xl p-6">
             <div className="flex -space-x-2">
-              {['👩‍💻', '👨‍💼', '👩‍🏫', '👨‍⚕️', '👩‍💼'].map((avatar, i) => (
+              {["👩‍💻", "👨‍💼", "👩‍🏫", "👨‍⚕️", "👩‍💼"].map((avatar, i) => (
                 <div
                   key={i}
                   className="w-10 h-10 rounded-full bg-gradient-to-r from-brand-400 to-accent-400 flex items-center justify-center text-sm border-2 border-background"
@@ -133,5 +145,5 @@ export const Testimonials = (): React.ReactElement => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

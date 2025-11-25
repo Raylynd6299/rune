@@ -1,44 +1,50 @@
-import React from 'react'
+import React from "react";
 
 export const Features = (): React.ReactElement => {
   const features = [
     {
-      icon: '🎯',
-      title: 'Smart Vocabulary System',
-      description: 'Learn words efficiently with our spaced repetition algorithm that adapts to your learning pace.',
-      color: 'from-brand-400 to-brand-600'
+      icon: "🎯",
+      title: "Smart Vocabulary System",
+      description:
+        "Learn words efficiently with our spaced repetition algorithm that adapts to your learning pace.",
+      color: "from-brand-400 to-brand-600",
     },
     {
-      icon: '🔊',
-      title: 'Pronunciation Training',
-      description: 'Perfect your accent with AI-powered phonetic coaching and real-time feedback.',
-      color: 'from-accent-400 to-accent-600'
+      icon: "🔊",
+      title: "Pronunciation Training",
+      description:
+        "Perfect your accent with AI-powered phonetic coaching and real-time feedback.",
+      color: "from-accent-400 to-accent-600",
     },
     {
-      icon: '📚',
-      title: 'Immersive Content',
-      description: 'Learn through authentic videos, podcasts, and articles from native speakers.',
-      color: 'from-purple-400 to-purple-600'
+      icon: "📚",
+      title: "Immersive Content",
+      description:
+        "Learn through authentic videos, podcasts, and articles from native speakers.",
+      color: "from-purple-400 to-purple-600",
     },
     {
-      icon: '📊',
-      title: 'Progress Analytics',
-      description: 'Track your learning journey with detailed insights and personalized recommendations.',
-      color: 'from-green-400 to-green-600'
+      icon: "📊",
+      title: "Progress Analytics",
+      description:
+        "Track your learning journey with detailed insights and personalized recommendations.",
+      color: "from-green-400 to-green-600",
     },
     {
-      icon: '👥',
-      title: 'Social Learning',
-      description: 'Connect with learners worldwide, join study groups, and find language exchange partners.',
-      color: 'from-orange-400 to-orange-600'
+      icon: "👥",
+      title: "Social Learning",
+      description:
+        "Connect with learners worldwide, join study groups, and find language exchange partners.",
+      color: "from-orange-400 to-orange-600",
     },
     {
-      icon: '🎮',
-      title: 'Gamified Experience',
-      description: 'Stay motivated with achievements, streaks, and friendly competition.',
-      color: 'from-pink-400 to-pink-600'
-    }
-  ]
+      icon: "🎮",
+      title: "Gamified Experience",
+      description:
+        "Stay motivated with achievements, streaks, and friendly competition.",
+      color: "from-pink-400 to-pink-600",
+    },
+  ];
 
   return (
     <section className="py-24 bg-background">
@@ -52,8 +58,9 @@ export const Features = (): React.ReactElement => {
             </span>
           </h2>
           <p className="max-w-2xl mx-auto text-lg text-muted-foreground">
-            Our comprehensive platform combines proven learning methods with cutting-edge technology 
-            to make language learning effective, engaging, and enjoyable.
+            Our comprehensive platform combines proven learning methods with
+            cutting-edge technology to make language learning effective,
+            engaging, and enjoyable.
           </p>
         </div>
 
@@ -66,13 +73,15 @@ export const Features = (): React.ReactElement => {
             >
               {/* Background gradient on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-transparent to-accent-50/50 dark:to-accent-900/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              
+
               <div className="relative">
                 {/* Icon */}
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div
+                  className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}
+                >
                   {feature.icon}
                 </div>
-                
+
                 {/* Content */}
                 <h3 className="text-xl font-bold mb-3 text-foreground">
                   {feature.title}
@@ -94,5 +103,5 @@ export const Features = (): React.ReactElement => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

@@ -1,49 +1,49 @@
-import React from 'react'
-import { Button } from '@/components/Button'
-import { ThemeToggle } from '@/components/ThemeToggle'
+import React from "react";
+import { Button } from "@/components/Button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export const Footer = (): React.ReactElement => {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   const footerLinks = {
     product: [
-      { name: 'Features', href: '#features' },
-      { name: 'Pricing', href: '#pricing' },
-      { name: 'Languages', href: '#languages' },
-      { name: 'Mobile App', href: '#mobile' },
-      { name: 'API', href: '#api' }
+      { name: "Features", href: "#features" },
+      { name: "Pricing", href: "#pricing" },
+      { name: "Languages", href: "#languages" },
+      { name: "Mobile App", href: "#mobile" },
+      { name: "API", href: "#api" },
     ],
     company: [
-      { name: 'About Us', href: '#about' },
-      { name: 'Careers', href: '#careers' },
-      { name: 'Blog', href: '#blog' },
-      { name: 'Press', href: '#press' },
-      { name: 'Contact', href: '#contact' }
+      { name: "About Us", href: "#about" },
+      { name: "Careers", href: "#careers" },
+      { name: "Blog", href: "#blog" },
+      { name: "Press", href: "#press" },
+      { name: "Contact", href: "#contact" },
     ],
     resources: [
-      { name: 'Help Center', href: '#help' },
-      { name: 'Community', href: '#community' },
-      { name: 'Tutorials', href: '#tutorials' },
-      { name: 'Documentation', href: '#docs' },
-      { name: 'Status', href: '#status' }
+      { name: "Help Center", href: "#help" },
+      { name: "Community", href: "#community" },
+      { name: "Tutorials", href: "#tutorials" },
+      { name: "Documentation", href: "#docs" },
+      { name: "Status", href: "#status" },
     ],
     legal: [
-      { name: 'Privacy Policy', href: '#privacy' },
-      { name: 'Terms of Service', href: '#terms' },
-      { name: 'Cookie Policy', href: '#cookies' },
-      { name: 'GDPR', href: '#gdpr' },
-      { name: 'Accessibility', href: '#accessibility' }
-    ]
-  }
+      { name: "Privacy Policy", href: "#privacy" },
+      { name: "Terms of Service", href: "#terms" },
+      { name: "Cookie Policy", href: "#cookies" },
+      { name: "GDPR", href: "#gdpr" },
+      { name: "Accessibility", href: "#accessibility" },
+    ],
+  };
 
   const socialLinks = [
-    { name: 'Twitter', icon: '🐦', href: '#twitter' },
-    { name: 'Facebook', icon: '📘', href: '#facebook' },
-    { name: 'Instagram', icon: '📷', href: '#instagram' },
-    { name: 'LinkedIn', icon: '💼', href: '#linkedin' },
-    { name: 'YouTube', icon: '📺', href: '#youtube' },
-    { name: 'TikTok', icon: '🎵', href: '#tiktok' }
-  ]
+    { name: "Twitter", icon: "🐦", href: "#twitter" },
+    { name: "Facebook", icon: "📘", href: "#facebook" },
+    { name: "Instagram", icon: "📷", href: "#instagram" },
+    { name: "LinkedIn", icon: "💼", href: "#linkedin" },
+    { name: "YouTube", icon: "📺", href: "#youtube" },
+    { name: "TikTok", icon: "🎵", href: "#tiktok" },
+  ];
 
   return (
     <footer className="bg-card border-t border-border">
@@ -55,9 +55,10 @@ export const Footer = (): React.ReactElement => {
               Stay updated with language learning tips
             </h3>
             <p className="text-muted-foreground mb-8">
-              Get weekly insights, new features, and exclusive content delivered to your inbox.
+              Get weekly insights, new features, and exclusive content delivered
+              to your inbox.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
@@ -68,7 +69,7 @@ export const Footer = (): React.ReactElement => {
                 Subscribe
               </Button>
             </div>
-            
+
             <p className="text-xs text-muted-foreground mt-4">
               No spam, unsubscribe at any time.
             </p>
@@ -89,15 +90,17 @@ export const Footer = (): React.ReactElement => {
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-brand-500 to-brand-600 bg-clip-text text-transparent">
                   Polyfy
                 </h1>
-                <p className="text-xs text-muted-foreground">The Natural Way to Learn Languages</p>
+                <p className="text-xs text-muted-foreground">
+                  The Natural Way to Learn Languages
+                </p>
               </div>
             </div>
-            
+
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Empowering millions of learners worldwide to master new languages through 
-              innovative technology and proven learning methods.
+              Empowering millions of learners worldwide to master new languages
+              through innovative technology and proven learning methods.
             </p>
-            
+
             {/* Social links */}
             <div className="flex items-center gap-3">
               {socialLinks.map((social, index) => (
@@ -188,10 +191,11 @@ export const Footer = (): React.ReactElement => {
               <span>© {currentYear} Polyfy. All rights reserved.</span>
               <span className="hidden sm:inline">•</span>
               <span className="flex items-center gap-1">
-                Made with <span className="text-red-500">❤️</span> for language learners
+                Made with <span className="text-red-500">❤️</span> for language
+                learners
               </span>
             </div>
-            
+
             <div className="flex items-center gap-4">
               <ThemeToggle />
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -209,5 +213,5 @@ export const Footer = (): React.ReactElement => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
